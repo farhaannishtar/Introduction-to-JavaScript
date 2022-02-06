@@ -19,8 +19,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge = 24;
+if (votingAge >= 18) {
+  console.log(true);
+} 
 
 /*
 Task 1b - Values
@@ -32,8 +34,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let a = 1;
+const b = 2;
+if (b === 2) {
+  a = 3;
+}
+console.log(a);
 
 
 
@@ -42,14 +48,14 @@ Task 1c - Convert Strings to Numbers
 
 Do the following:   
    1. Declare a string type variable with the value of "1999"
-   2. Convert the string value of "1999" to a integer value of 1999
+   2. Convert the string value of "1999" to an integer value of 1999
    3. Console log the result
 
    HINT: look up the Number method
 */
-
-
-
+let year = 1999;
+Number(year);
+console.log(typeof year);
 
 /*
 Task 1d - Multiply

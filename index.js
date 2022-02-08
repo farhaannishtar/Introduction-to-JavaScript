@@ -130,9 +130,9 @@ function hungryDog(weight, age){
   }
   if (age >= (2/12) && age <= (4/12)) {
     return .1 * weight;
-  } else if (age > (4/12) && age <= (7/12)) {
+  } else if (age > (4/12) && age < (7/12)) {
     return .05 * weight;
-  } else {
+  } else if ((age >= (7/12)) && (age <= (12/12))) {
     return .04 * weight;
   }
 }
@@ -160,42 +160,42 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-const computerChoice = Math.floor(Math.random() * 3);
+// const computerChoice = Math.floor(Math.random() * 3);
 function game(user, computer){
   /*add your code here*/
-  let computerChoice;
-  if (computer === 0) {
-    computerChoice = 'paper';
-  } else if (computer === 1) {
-    computerChoice = 'rock';
-  } else {
-    computerChoice = 'scissors';
-  }
+  // let computerChoice;
+  // if (computer === 0) {
+  //   computerChoice = 'paper';
+  // } else if (computer === 1) {
+  //   computerChoice = 'rock';
+  // } else {
+  //   computerChoice = 'scissors';
+  // }
 
-  if(computerChoice === user) {
+  if(computer === user) {
     return "it's a tie";
-  } else if(computerChoice === 'paper') {
+  } else if(computer === 'paper') {
       if (user === 'rock') {
-       return 'you win!';
+       return 'you lose!';
       } else {
-        return 'you lose!';
+        return 'you win!';
       }
-    } else if(computerChoice === 'rock') {
+  } else if(computer === 'rock') {
+      if (user === 'paper') {
+         return 'you win!';
+      } else {
+         return 'you lose!';
+      }
+  } else {
+      if (computer === 'scissors') {
         if (user === 'paper') {
-          return 'you win!';
+          return 'you lose!';
         } else {
-           return 'you lose!';
+         return 'you win!';
         }
-    } else {
-        if (user === 'paper') {
-          return 'you win!';
-        } else {
-           return 'you lose!';
     }
   }
 }   
-game('paper', computerChoice);
-
 
 
 
@@ -293,16 +293,16 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(word) {
-  word.toLowerCase();
-  let count;
-  for(let i = 0; i <= word.length; i++){
-    if (word[i].includes('a') || word[i].includes('e') || word[i].includes('i') || word[i].includes('o') || word[i].includes('u')){
-      count++;
-    }
-  }
-  return count;
-}
+// function vowelCounter(word) {
+//   word.toLowerCase();
+//   let count;
+//   for(let i = 0; i <= word.length; i++){
+//     if (word[i].includes('a') || word[i].includes('e') || word[i].includes('i') || word[i].includes('o') || word[i].includes('u')){
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 // vowelCounter('happy');
 
 
